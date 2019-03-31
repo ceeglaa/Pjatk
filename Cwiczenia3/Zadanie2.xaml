@@ -1,0 +1,30 @@
+﻿<Window x:Class="Cwiczenia3.Zadanie2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Cwiczenia3"
+        mc:Ignorable="d"
+        Title="Zadanie2" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Margin=" 30 40 23 40"> Wybierz Status</Label>
+        <ComboBox x:Name="Status" SelectionChanged="ComboBoxStatus_SelectionChanged" Margin="150 40 250 40" >
+            <ComboBoxItem Content="Student" />
+            <ComboBoxItem Content="Absolwent" />
+            <ComboBoxItem Content="Doktorant" />
+        </ComboBox>
+        
+        <Label Grid.Row="1" Margin=" 30 40 23 40">Status Student to</Label>
+        <TextBox Grid.Row="1" x:Name="Selected_Status"  Margin=" 20 60 23 20" />
+        <Button Grid.Row="2" x:Name="Close_Button" Margin=" 600 60 23 20">
+            Close
+        </Button>
+    </Grid>
+</Window>
